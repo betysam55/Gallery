@@ -1,18 +1,38 @@
-@extends('layouts.app1')
+@extends('layouts.app')
 
 @section('content')
-	<h3>{{$photo->title}}</h3>
-	<p>{{$photo->description}}</p>
-	<a href="/albums/{{$photo->album_id}}" class="button secondary">Back To Gallery</a>
-	<hr>
-	<img src="/storage/photo/{{$photo->album_id}}/{{$photo->photos}}" alt="{{$photo->title}}">
-	<br><br>
-	{!!Form::open(['action'=>['PhotoController@destroy','$photo->id'], 'methoid'=>'post'])!!}
-	{{Form::hidden('_method','DELETE')}}
-	{{Form::submit('Delete Photo',['class'=>'button alert'])}}
-	{!!Form::close()!!}
-	<hr>
-	<small>Size:{{$photo->size}}</small>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 col-md-offset-0">
+            <div class="panel panel-default">
+                <div class="panel-heading">Dashboard <br>
+                 @if (session('status'))
+                        <div class="alert alert-success">
+                            {{ session('status') }}
+                        </div>
+                    @endif
+                    You are logged in!</div>
+
+                <div class="panel-body">
+                   <!-- <h3>{{$photo->title}}</h3>
+			<p>{{$photo->description}}</p>
+			<div> --><a href="">@include('inc.partialshow')</a><a href="/albums/usercreate/{{$photo->album_id}}" class="btn btn-secondary">Back To Gallery</a><a href="/storage/photo/{{$photo->album_id}}/{{$photo->photos}}" target="_blank"><button class="btn btn-primary">Download</button></a></div><small>Size:{{$photo->size}}kb</small>
+			<hr>
+			<img width="600" height="400" class="img-thumbnail" src="/storage/photo/{{$photo->album_id}}/{{$photo->photos}}" alt="{{$photo->title}}">
+			<br>
+			
+			
+			<hr>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+		
+
+
+	
 @endsection
+
 
 

@@ -18,7 +18,10 @@ class CreateAlbumsTable extends Migration
             $table->string('name')->uniqid();
             $table->text('description');
             $table->string('cover_image');
+            $table->integer('created_by')->unsigned();
             $table->timestamps();
+             $table->foreign('created_by')->references('id')->on('users');
+            
         });
     }
 

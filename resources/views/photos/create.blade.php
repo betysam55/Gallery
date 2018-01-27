@@ -1,12 +1,15 @@
-@extends('layouts.app1')
+
+
+@extends('layouts.app')
 
 @section('content')
-	<h3>Upload photo</h3>
-	{!!Form::open(['action'=>'PhotoController@store','method'=>'post','enctype'=>'multipart/form-data'])!!}
-	{{Form::text('title','',['placeholder'=>'Photo Title'])}}
-	{{Form::textarea('description','',['placeholder'=>'Photo description'])}}
-	{{Form::hidden('album_id',$album_id)}}
-	{{Form::file('photo')}}
-	{{Form::submit('submit')}}
-	{!!Form::close()!!}
+	
+	<div class="container" >
+		<h3>Create New Photo</h3>
+		<div class="jumbotron">
+	 @include('inc.partials')
+
+	</div>
+	</div>
+
 @endsection

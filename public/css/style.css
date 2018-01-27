@@ -1,0 +1,40 @@
+
+
+
+
+#footer-sec {
+
+   background-color:#34296F; 
+   color:#fff;
+   padding:20px;
+}
+#footer-sec i {
+    margin-right:10px;
+}
+#footer-sec span {
+    font-size:20px;
+    color:#ff6a00;
+}
+#footer-sec small {
+    display:table-cell;
+    color: #C5C5C5;
+}
+#footer-sec p {
+   border-right: 1px solid #3D3577;
+   padding-right:10px;
+
+}
+#footer-sec .media-heading > a {
+    color:white;
+    font-size:14px;
+}
+#blog-footer-div {
+     border-right: 1px solid #3D3577;
+      padding-right:10px;
+}
+#footser-end {
+    text-align:right;
+  background-color:#21165F; 
+   color:#fff;
+   padding:10px;
+}

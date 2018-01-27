@@ -24,20 +24,6 @@
                                 @endif
                             </div>
                         </div>
-                        <div class="form-group{{ $errors->has('channel_name') ? ' has-error' : '' }}">
-                            <label for="channel_name" class="col-md-4 control-label">Channel Name</label>
-
-                            <div class="col-md-6">
-                                <input id="channel_name" type="text" class="form-control" name="channel_name" value="{{ old('channel_name') }}" required autofocus>
-
-                                @if ($errors->has('channel_name'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('channel_name') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
                             <label for="email" class="col-md-4 control-label">E-Mail Address</label>
 

@@ -8,7 +8,7 @@
 
 @if(session('success'))
 	
-		<div class="callout success">
+		<div class="alert">
 			{{session('success')}}
 		</div>
 	

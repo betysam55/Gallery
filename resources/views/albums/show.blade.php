@@ -2,21 +2,20 @@
 
 @section('content')
 <div class="container">
-<div class="jumbotron">
-	<h2>{{$album->name}}</h2>
-	<div class="responsive">
-	<div class="gallery">
-	    <a target="_blank" href="">
-	      <img width="200" height="200" class="img-thumbnail" src="../storage/album_covers/{{$album->cover_image}}" alt="{{$album->name}}">
-	    </a>
-	    <div class="desc"><h5>Album Cover Image</h5></div>
-	 	<div class="desc">{{$album->description}}</div>
-	  </div>
-	</div>
-	<hr>
-	<br>
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="panel panel-default">
+                <div class="panel-heading">Dashboard <br>
+                	@if (session('status'))
+                        <div class="alert alert-success">
+                            {{ session('status') }}
+                        </div>
+                    @endif
+                    You are logged in!</div>
 
-	@if(count($album->photos)>0)
+                <div class="panel-body">
+                    
+                    @if(count($album->photos)>0)
 	<?php 
 		$colcount=count($album->photos);
 		$i=1;
@@ -62,6 +61,11 @@
 	 @else
 	 <P>No Photo to display</P>
 	 @endif
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-	 </div></div>
+	
 @endsection 

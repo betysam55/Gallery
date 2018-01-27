@@ -5,12 +5,18 @@
     "license": "MIT",
     "type": "project",
     "require": {
+
         "php": ">=7.0.0",
         "dwij/laraadmin": "1.0.40",
         "fideloper/proxy": "~3.3",
+        "ipunkt/subscriptions": "~0.1",
         "laravel/framework": "5.5.*",
         "laravel/tinker": "~1.0",
-        "laravelcollective/html": "^5.5"
+        "laravelcollective/html": "^5.5",
+        "latrell/captcha": "dev-master",
+        "laravel/framework": "4.2.*",
+        "jeroen-g/laravel-photo-gallery": "1.*",
+        "ipunkt/subscriptions": "~0.1"
     },
     "require-dev": {
 
