@@ -18,7 +18,7 @@
 
 	 			<div class="responsive">
 	 				<div class="gallery">
-	 			<a href="/albums/usercreate/{{$album->id}}" data-toggle="tooltip" title="">
+	 			<a href="{{route('viewalbum',['id' =>$album->id ])}}" data-toggle="tooltip" title="">
 	 				<img  class="img-thumbnail" src="storage/album_covers/{{$album->cover_image}}" alt="{{$album->name}}">
 	 			</a>
 
@@ -35,7 +35,7 @@
 	 				<div class="polaroid">
 	 				<div class="responsive">
 	 					<div class="gallery">
-	 			<a href="/albums/usercreate/{{$album->id}}" data-toggle="tooltip" title="">
+	 			<a href="{{route('viewalbum',['id' =>$album->id ])}}" data-toggle="tooltip" title="">
 	 				<img  class="img-thumbnail" src="storage/album_covers/{{$album->cover_image}}" alt="{{$album->name}}">
 	 			</a>
 	 			<br>

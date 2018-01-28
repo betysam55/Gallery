@@ -120,7 +120,7 @@ div.desc {
 
                         @guest
                             <li><a href="{{'/about' }}">About</a></li>
-                            <li><a href="{{'/DOWNLOADS' }}">Downloads</a></li>
+                            <li><a href="{{route('downloads') }}">Downloads</a></li>
                             <li><a href="{{ route('login') }}">Login</a></li>
                             <li><a href="{{ route('register') }}">Register</a></li>
 

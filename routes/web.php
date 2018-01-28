@@ -25,7 +25,7 @@ Route::post('/albums/store','AlbumController@store');
 Route::get('/photos/create/{id}','PhotoController@create');
 Route::post('/photos/store','PhotoController@store');
 Route::get('/photos/{album_id}','PhotoController@show');
-Route::delete('/photos/{id}','PhotoController@destroy');
+Route::delete('/photos/{id}','PhotoController@destroy',function ($id){ /* */})->name('viewphoto');
 Auth::routes();
 
 Route::get('/home', 'AlbumController@index')->name('home');
@@ -34,7 +34,7 @@ Auth::routes();
 
 Route::get('/home', 'AlbumController@index')->name('home');
 
-Route::get('/albums/usercreate/{id}','AlbumController@usercreate');
+Route::get('/albums/usercreate/{id}','AlbumController@usercreate',function ($id){ /* */})->name('viewalbum');
 
 Route::get('/albums/usercreate/create/{id}','PhotoController@create');
 
@@ -42,3 +42,6 @@ Route::get('/user/{id}/profile','UserProfileController@index');//user profile ed
 Route::get('/user/{created_by}/myalbums','UserProfileController@myAlbums');//user album view
 Route::get('/user/{album_id}/myalbums/photo','UserProfileController@myPhotos');
 });
+Route::get('album/downloads', function () {
+    //
+})->name('downloads');
