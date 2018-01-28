@@ -27,7 +27,7 @@
 	 		<div class="col-md-4  col-lg-4 col-sm-6 col-xs-12">
 	 			<div class="responsive">
 	 				<div class="gallery">
-	 			<a href="/photos/{{$photos->id}}">
+	 			<a href="{{route('viewphoto',['id' =>$photos->id ])}}">
 	 				<img  width="600" height="400" class="img-thumbnail" src="/storage/photo/{{$photos->album_id}}/{{$photos->photos}}" alt="{{$photos->title}}">
 	 			</a>
 	 			<div class="desc">{{$photos->title}}</div>
@@ -39,7 +39,7 @@
 	 			<div class="col-md-4  col-lg-4 col-sm-6 col-xs-12">
 	 			<div class="responsive">
 	 				<div class="gallery">
-	 			<a href="/photos/{{$photos->id}}">
+	 			<a href="{{route('viewphoto',['id' =>$photos->id ])}}">
 	 				<img  width="600" height="400" class="img-thumbnail" src="/storage/photo/{{$photos->album_id}}/{{$photos->photos}}" alt="{{$photos->title}}">
 	 			</a>
 	 			
