@@ -19,7 +19,7 @@
 	 			<div class="responsive">
 	 				<div class="gallery">
 	 			<a href="{{route('viewalbum',['id' =>$album->id ])}}" data-toggle="tooltip" title="">
-	 				<img  class="img-thumbnail" src="storage/album_covers/{{$album->cover_image}}" alt="{{$album->name}}">
+	 				<img  class="img-thumbnail watermark" src="storage/album_covers/{{$album->cover_image}}" alt="{{$album->name}}">
 	 			</a>
 
 	 			<br>
@@ -36,7 +36,7 @@
 	 				<div class="responsive">
 	 					<div class="gallery">
 	 			<a href="{{route('viewalbum',['id' =>$album->id ])}}" data-toggle="tooltip" title="">
-	 				<img  class="img-thumbnail" src="storage/album_covers/{{$album->cover_image}}" alt="{{$album->name}}">
+	 				<img  class="img-thumbnail watermark" src="storage/album_covers/{{$album->cover_image}}" alt="{{$album->name}}">
 	 			</a>
 	 			<br>
 	 			<div class="header"><h3>{{$album->name}}</h3>
@@ -60,6 +60,7 @@
 	 @endif
 				<center>{{$albums->links()}}</center>
 	 </div>
+
 	 
 @endsection
 

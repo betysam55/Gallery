@@ -24,8 +24,8 @@ Route::post('/albums/store','AlbumController@store');
 
 Route::get('/photos/create/{id}','PhotoController@create');
 Route::post('/photos/store','PhotoController@store');
-Route::get('/photos/{album_id}','PhotoController@show');
-Route::delete('/photos/{id}','PhotoController@destroy',function ($id){ /* */})->name('viewphoto');
+Route::get('/photos/{album_id}','PhotoController@show',function ($album_id){ /* */})->name('viewphoto');
+Route::delete('/photos/{id}','PhotoController@destroy');
 Auth::routes();
 
 Route::get('/home', 'AlbumController@index')->name('home');

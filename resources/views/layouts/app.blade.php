@@ -86,9 +86,30 @@ div.desc {
 .img:hover {
     box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
 }
+
 </style>
 </head>
-<body>
+<body onload="myFunction()" >
+
+    <div id="loader" class="loader">
+    <div class="loader-inner">
+        <div class="loader-line-wrap">
+            <div class="loader-line"></div>
+        </div>
+        <div class="loader-line-wrap">
+            <div class="loader-line"></div>
+        </div>
+        <div class="loader-line-wrap">
+            <div class="loader-line"></div>
+        </div>
+        <div class="loader-line-wrap">
+            <div class="loader-line"></div>
+        </div>
+        <div class="loader-line-wrap">
+            <div class="loader-line"></div>
+        </div>
+    </div>
+</div>
     <div id="app">
         <nav class="navbar navbar-pils navbar-static-top navbar-inverse">
             <div class="container">
@@ -165,6 +186,35 @@ div.desc {
     
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ asset('js/jquery.min.js') }}"></script>
+    <script src="{{ asset('js/jquery.watermark.min.js') }}"></script>
+    <script >@guest
+            $('.watermark').watermark({
+        text: 'www.photoShare.io',
+        textWidth: 600,
+        gravity: 'n',
+        opacity: 6,
+        margin: 12
+    });
 
+    $('.watermark2').watermark({
+        path: '',
+        margin: 0,
+        gravity: 'nw',
+        opacity: 0.5,
+        outputWidth: 600
+    });
+    @endguest
+    var myVar;
+
+function myFunction() {
+    myVar = setTimeout(showPage, 3000);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("app").style.display = "block";
+}
+    </script>
 </body>
 </html>

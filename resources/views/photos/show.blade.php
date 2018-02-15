@@ -16,7 +16,7 @@
                 <div class="panel-body">
                    <!-- <h3>{{$photo->title}}</h3>
 			<p>{{$photo->description}}</p>
-			<div> --><a href="">@include('inc.partialshow')</a><a href="/albums/usercreate/{{$photo->album_id}}" class="btn btn-secondary">Back To Gallery</a><a href="/storage/photo/{{$photo->album_id}}/{{$photo->photos}}" target="_blank"><button class="btn btn-primary">Download</button></a></div><small>Size:{{$photo->size}}kb</small>
+			<div> --><a href="">@include('inc.partialshow')</a><a href="/home/elyalcon/public_html/G/Gallery/storage/albums/usercreate/{{$photo->album_id}}" class="btn btn-secondary">Back To Gallery</a><a href="/storage/photo/{{$photo->album_id}}/{{$photo->photos}}" target="_blank"><button class="btn btn-primary">Download</button></a></div><small>Size:{{$photo->size}}kb</small>
 			<hr>
 			<img width="600" height="400" class="img-thumbnail" src="/storage/photo/{{$photo->album_id}}/{{$photo->photos}}" alt="{{$photo->title}}">
 			<br>

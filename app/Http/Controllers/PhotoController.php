@@ -43,8 +43,8 @@ class PhotoController extends Controller
     	}
     	public function destroy($id){
     		$photo=Photo::find($id);
-    		if(Storage::delete('/storage/photo/'.$photo->album_id.'/'.$photo->photos)){
-    			$photos->delete();
+    		if(Storage::delete('/storage/photo/{$photo->album_id}/{$photo->photos}')){
+    			$photo->delete();
     			return redirect('/')->with('success','photo deleted');
     		}
     	}

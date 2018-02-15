@@ -28,7 +28,7 @@
 	 			<div class="responsive">
 	 				<div class="gallery">
 	 			<a href="{{route('viewphoto',['id' =>$photos->id ])}}">
-	 				<img  width="600" height="400" class="img-thumbnail" src="/storage/photo/{{$photos->album_id}}/{{$photos->photos}}" alt="{{$photos->title}}">
+	 				<img  width="600" height="400" class="img-thumbnail" src="../photo/{{$photos->album_id}}/{{$photos->photos}}" alt="{{$photos->title}}">
 	 			</a>
 	 			<div class="desc">{{$photos->title}}</div>
 	 			<div class="desc" ><a href="{{route('login')}}" class="button primary">Download</a></div>
@@ -40,7 +40,7 @@
 	 			<div class="responsive">
 	 				<div class="gallery">
 	 			<a href="{{route('viewphoto',['id' =>$photos->id ])}}">
-	 				<img  width="600" height="400" class="img-thumbnail" src="/storage/photo/{{$photos->album_id}}/{{$photos->photos}}" alt="{{$photos->title}}">
+	 				<img  width="600" height="400" class="img-thumbnail" src="../photo/{{$photos->album_id}}/{{$photos->photos}}" alt="{{$photos->title}}">
 	 			</a>
 	 			
 	 			<div class="desc">{{$photos->title}}</div>
