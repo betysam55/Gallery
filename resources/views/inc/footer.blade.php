@@ -22,7 +22,7 @@
                             <a href="{{ route('login') }}">Login</a><br>
                             <a href="{{ route('register') }}">Register</a><br>
                             <span>Follow Us</span><br>
-                            <a href="{{ route('register') }}">Register</a><br>
+                            <a href="{{ route('register') }}">Facebook</a><br>
                     </div>
                     
                 </div>
@@ -30,7 +30,7 @@
                 <div class="col-lg-4 col-md-4">
                     <span>Get letest news  </span>
                     
-                    <form role="form" >
+                    <form role="form"  >
                         <div class="input-group">
                             <input type="text" class="form-control" placeholder="Enter your email" required />
                             <span class="input-group-btn">
@@ -46,7 +46,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-md-12">
-                    2018 All Rights Reserved | by: <a href="#"  style="color:#fff" >www.mya.et</a>
+                    2018 All Rights Reserved | by: <a href="#"  style="color:#fff" >www.PhotoShare.io</a>
                 </div>
             </div>
 

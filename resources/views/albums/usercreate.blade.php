@@ -8,7 +8,7 @@
 	<div class="responsive">
 	<div class="gallery">
 	    <a target="" href="">
-	      <img width="200" height="200" class="img-thumbnail" src="../album_covers/{{$album->cover_image}}" alt="{{$album->name}}">
+	      <img width="200" height="200" class="img-thumbnail" src="/storage/album_covers/{{$album->cover_image}}" alt="{{$album->name}}">
 	    </a>
 	    <div class="desc"><h5>Album Cover Image</h5>
 	 	<div class="desc">{{$album->description}}</div>
@@ -35,10 +35,10 @@
 	 			<div class="responsive">
 	 				<div class="gallery">
 	 			<a href="{{route('viewphoto',['album_id' =>$photos->id])}}">
-	 				<img  width="600" height="400" class="img-thumbnail" src="../photo/{{$photos->album_id}}/{{$photos->photos}}" alt="{{$photos->title}}">
+	 				<img  width="600" height="400" class="img-thumbnail" src="/storage/photo/{{$photos->album_id}}/{{$photos->photos}}" alt="{{$photos->title}}">
 	 			</a>
 	 			<div class="desc">{{$photos->title}}</div>
-	 			<div class="desc" ><a target="_blank" href="../photo/{{$photos->album_id}}/{{$photos->photos}}" class="button primary">Download</a></div>
+	 			<div class="desc" ><a target="_blank" href="/storage/photo/{{$photos->album_id}}/{{$photos->photos}}" class="button primary">Download</a></div>
 				
 	 			</div>
 	 			</div>
@@ -47,11 +47,11 @@
 	 			<div class="responsive">
 	 				<div class="gallery">
 	 			<a href="/photos/{{$photos->id}}">
-	 				<img  width="600" height="400" class="img-thumbnail" src="../photo/{{$photos->album_id}}/{{$photos->photos}}" alt="{{$photos->title}}">
+	 				<img  width="600" height="400" class="img-thumbnail" src="/storage/photo/{{$photos->album_id}}/{{$photos->photos}}" alt="{{$photos->title}}">
 	 			</a>
 	 			
 	 			<div class="desc">{{$photos->title}}</div>
-	 			<div class="desc" ><a target="_blank" href="../photo/{{$photos->album_id}}/{{$photos->photos}}" class="button primary">Download</a></div>
+	 			<div class="desc" ><a target="_blank" href="/storage/photo/{{$photos->album_id}}/{{$photos->photos}}" class="button primary">Download</a></div>
 	 			</div>
 	 			</div>
 	 			@endif
@@ -78,7 +78,7 @@
             
             <div class="midium-4 columns end">
                 <a href="={{$album->id}}">
-                    <img class="thumbnail" src="{{ config('constant.storage_path')}}/album_covers/{{$album->created_by}}/{{$album->cover_image}}" alt="{{$album->name}}">
+                    <img class="thumbnail" src="/storage/album_covers/{{$album->created_by}}/{{$album->cover_image}}" alt="{{$album->name}}">
                 </a>
                 <br>
                 <h4>{{$album->name}}</h4>

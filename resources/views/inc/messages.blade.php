@@ -8,7 +8,7 @@
 
 @if(session('success'))
 	
-		<div class="alert">
+		<div class="alert alert-success">
 			{{session('success')}}
 		</div>
 	

@@ -17,14 +17,14 @@ class AlbumController extends Controller
     }
     public function create(){
         if (!Auth::check()){
-            return redirect('/albums')->with('allert','Must login first!');
+            return redirect('/albums')->with('error','Must login first!');
         }
     	return view('albums.create');
 
     }
     public function store(Request $request){
          if (!Auth::check()){
-            return  redirect()->route('login')->with('allert','Must login first!');
+            return  redirect()->route('login')->with('error','Must login first!');
         }
         else{
     	$this->validate($request,[
@@ -47,7 +47,7 @@ class AlbumController extends Controller
     	$album->cover_image=$filenameToStore;
         $album->created_by=Auth::user()->id;
     	if($album->save()){
-    		return redirect('/albums')->with('success','Album created');
+    		return redirect('/albums/usercreate/create/'.$album->id)->with('success','Album created Successfully!   Now Please Upload Photo');
     	}
         }
     }
